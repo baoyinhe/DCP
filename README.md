@@ -19,11 +19,18 @@
 
 ## Requirements
 
-* python 2.7
-* pytorch 0.4
-* tensorflow
+* python 2.7/3.6
+* pytorch
+* tensorflow 
 * pyhocon
 * prettytable
+
+```
+conda install pytorch-gpu torchvision cudatoolkit=10.0
+conda install tensorflow-gpu=1.15
+pip install pyhocon
+pip install prettytable
+```
 
 ## Testing
 
@@ -32,7 +39,7 @@
 2. Add DCP into PYTHONPATH.
 ```Shell
 # This is my path of DCP. You need to change to your path of DCP.
-export PYTHONPATH=/home/liujing/Codes/Discrimination-aware-Channel-Pruning-for-Deep-Neural-Networks:$PYTHONPATH
+export PYTHONPATH=/home/hby/mycode/DCP:$PYTHONPATH
 ```
 
 3. Set configuration for testing.
@@ -56,7 +63,7 @@ python main.py test.hocon
 2. Add DCP into PYTHONPATH.
 ```Shell
 # This is my path of DCP. You need to change to your path of DCP.
-export PYTHONPATH=/home/liujing/Codes/Discrimination-aware-Channel-Pruning-for-Deep-Neural-Networks:$PYTHONPATH
+export PYTHONPATH=/home/hby/mycode/DCP:$PYTHONPATH
 ```
 
 3. Before channel pruning, you need to add discrimination-aware loss and fine tune the whole network. You need to set `save_path`, `data_path`, `experiment_id` and the `pretrained` in `dcp/auxnet/cifar10_resnet.hocon`.
@@ -89,7 +96,7 @@ vim cifar10_resnet.hocon
 
 8. Fine-tune the pruned model.
 ```Shell
-python main cifar10_resnet.hocon
+python main.py cifar10_resnet.hocon
 ```
 
 ## Citation

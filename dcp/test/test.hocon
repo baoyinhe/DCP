@@ -1,9 +1,9 @@
 # ------------- general options ----------------------------------------
-save_path = "/home/liujing/NFS/TPAMI_channel_pruning/finetune/resnet/test/" # log path
-data_path = "/home/dataset/" # path for dataset folder, containing cifar10 and imagenet
+save_path = "/home/hby/mycode/DCP/NFS/TPAMI_channel_pruning/finetune/vgg/test/" # log path
+data_path = "/home/hby/data/" # path for dataset folder, containing cifar10 and imagenet
 dataset = "cifar10"  # options: imagenet | cifar10
 seed = 1  # manually set RNG seed
-gpu = "7"  # GPU id to use, e.g. "0,1,2,3"
+gpu = "0"  # GPU id to use, e.g. "0,1,2,3"
 print_frequency = 10
 
 # ------------- data options -------------------------------------------
@@ -22,8 +22,8 @@ n_epochs = 400  # number of total epochs
 step = [160, 240]  # multi-step for linear learning rate
 
 # ------------- model options ------------------------------------------
-net_type = "vgg"  # options: resnet | preresnet
-experiment_id = "evaluation_20190510 "  # experiment identifier
+net_type = "vgg"  # options: resnet | preresnet | vgg
+experiment_id = "evaluation_1 "  # experiment identifier
 depth = 19  # resnet depth: (n-2)%6==0
 
 # ------------- resume or pretrained options ------------------------------

@@ -40,7 +40,7 @@ class CheckPoint(object):
                 model_dict[key] = value
             else:
                 if self.logger:
-                    self.logger.error("key error: {} {}".format(key, value.size))
+                    self.logger.error("key error: {} {}".format(key, type(value)))
                 # assert False
         model.load_state_dict(model_dict)
         return model

@@ -3,3 +3,4 @@
 temp/
 # *.hocon
 *.sh
+NFS/
